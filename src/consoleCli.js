@@ -1,5 +1,6 @@
 import { fork } from 'node:child_process';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 let loadingBar;
 
@@ -15,9 +16,8 @@ let loadingBar;
  */
 export default {
   loadingBarStart: async () => {
-    const modulePath = require.resolve('@maykoncapellari/cli-builder');
-    console.log(modulePath);
-    loadingBar = fork(path.resolve(modulePath, 'src/cli/loadingBar.js'));
+    const moduleDir = path.dirname(fileURLToPath(import.meta.url));
+    loadingBar = fork(path.resolve(moduleDir, 'cli/loadingBar.js'));
     loadingBar.unref();
     await new Promise((resolve) => setTimeout(resolve, 500));
   },
