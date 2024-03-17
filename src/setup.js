@@ -1,3 +1,5 @@
+import { prompt } from './prompt';
+
 /**
  * Used to validate if the value informed is valid
  * 
