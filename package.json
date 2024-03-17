@@ -1,0 +1,28 @@
+{
+  "name": "cli-builder",
+  "version": "1.0.0",
+  "description": "NPM Module to allow create cli faster",
+  "main": "src/index.js",
+  "type": "module",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maykon/cli-builder.git"
+  },
+  "scripts": {},
+  "keywords": [
+    "nodejs",
+    "cli",
+    "cli-builder",
+    "cli-helpers"
+  ],
+  "author": {
+    "name": "Maykon Luís Capellari <maykonluiscapellari@gmail.com>",
+    "url": "https://github.com/maykon"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maykon/cli-builder/issues"
+  },
+  "homepage": "https://github.com/maykon/cli-builder.git#readme"
+}
