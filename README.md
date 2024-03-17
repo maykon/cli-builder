@@ -13,5 +13,5 @@ Import in NodeJS script:
 
     import { prompt } from 'cli-builder';
 
-    prompt.question('Wanna paid me a coffee?');
+    prompt.question('Do you want to buy me a coffee?');
     
