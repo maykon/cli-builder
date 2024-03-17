@@ -1,4 +1,4 @@
-import { prompt } from './prompt';
+import { prompt } from './prompt.js';
 
 /**
  * Used to validate if the value informed is valid
