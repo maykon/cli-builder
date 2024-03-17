@@ -4,10 +4,10 @@ import { prompt } from './prompt.js';
 import { spawn } from './spawnAsync.js';
 import { setupParams } from './setup.js';
 
-export default {
-  consoleCli,
+export {
   BaseError,
+  consoleCli,
   prompt,
-  spawn,
   setupParams,
+  spawn,
 };
