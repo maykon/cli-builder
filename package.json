@@ -1,6 +1,6 @@
 {
   "name": "@maykoncapellari/cli-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NPM Module to allow create cli faster",
   "main": "src/index.js",
   "type": "module",
