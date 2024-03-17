@@ -15,7 +15,9 @@ let loadingBar;
  */
 export default {
   loadingBarStart: async () => {
-    loadingBar = fork(path.resolve('src/cli/loadingBar.js'));
+    const modulePath = require.resolve('@maykoncapellari/cli-builder');
+    console.log(modulePath);
+    loadingBar = fork(path.resolve(modulePath, 'src/cli/loadingBar.js'));
     loadingBar.unref();
     await new Promise((resolve) => setTimeout(resolve, 500));
   },
