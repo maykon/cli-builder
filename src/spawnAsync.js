@@ -1,5 +1,13 @@
 import { spawnSync } from 'node:child_process';
 
+/**
+ * Spwan is a helper to run some program/command in parallel 
+ * 
+ * @param {*} program - The command to run. 
+ * @param {*} args - List of string arguments.
+ * @param {*} opts - The options to spawn
+ * @returns 
+ */
 export const spawn = async (program, args, opts) => {
   const result = await spawnSync(program, args, opts);
   const { status, stdout, error, stderr } = result;

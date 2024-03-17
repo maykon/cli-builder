@@ -6,9 +6,27 @@ process.on('message', (_) => {
   loadingBar?.stop();
 });
 
+/**
+ * Class to handle the loading bar on console
+ * 
+ * @class
+ * @classdesc Create the loading bar with some specific size
+ * 
+ * @example
+ * loadingBar = new LoadingBar(24);
+ * loadingBar.start();
+ * await new Promise((resolve) => setTimeout(resolve, 1000));
+ * loadingBar.stop();
+ */
 export default class LoadingBar {
   #barSize = 3;
 
+  /**
+   * Create the loading bar object
+   * 
+   * @constructor
+   * @param {number} size 
+   */
   constructor(size) {
       this.size = size || 24;
       this.cursor = 0;
