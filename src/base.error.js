@@ -8,9 +8,18 @@
  * throw new BaseError('I am an error!'); * 
  */
 export default class BaseError extends Error {
-  constructor(message) {
+  error;
+
+  /**
+   * 
+   * @constructor
+   * @param {string} message 
+   * @param {*} error 
+   */
+  constructor(message, error = null) {
     super(message);
     this.name = 'BaseError';
+    this.error = error;
     if (process.env.NODE_ENV === 'production') {
       this.stack = null;
     }
