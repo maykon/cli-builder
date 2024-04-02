@@ -25,11 +25,15 @@ export default {
     loadingBar?.send('stop');
     loadingBar?.kill();
     loadingBar = null;
-    process.stdout.cursorTo(0, process.stdout.rows);
+    if (process.stdout.isTTY) {
+      process.stdout.cursorTo(0, process.stdout.rows);
+    }
     process.stdout.clearLine();
     await new Promise((resolve) => setTimeout(resolve, 250));
   },
   moveToStartRow: () => {
-    process.stdout.cursorTo(0, process.stdout.rows);
+    if (process.stdout.isTTY) {
+      process.stdout.cursorTo(0, process.stdout.rows);
+    }
   },
 };

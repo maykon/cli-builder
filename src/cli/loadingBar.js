@@ -86,7 +86,9 @@ export default class LoadingBar {
   }
 
   #moveCursorToStart() {
-    process.stdout.cursorTo(0, process.stdout.rows);
+    if (process.stdout.isTTY) {
+      process.stdout.cursorTo(0, process.stdout.rows);
+    }
   }
 
   async #run() {
